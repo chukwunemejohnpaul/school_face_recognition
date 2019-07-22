@@ -1,0 +1,101 @@
+<ScanScreen>
+        background_normal:""
+        canvas.before:
+                Color:
+                        rgba:(1,1,1,1)
+                RoundedRectangle:
+                        size: self.size
+                        pos: self.pos
+                        texture: root.myimgg.texture
+        size_hint:[.4,.7]
+
+
+
+
+
+<Nextscreen>
+    	id: nextscreen
+
+    	FloatLayout:
+                canvas.before:
+                        Color:
+                                rgba:(.9,.9,.9,7)
+                        Rectangle:
+                                size: self.size
+    			BoxLayout:
+                        orientation:"vertical"
+                        cols:1
+                        size_hint:[.7,.8]
+                        pos_hint:{"center_x":.5,"center_y":.5}
+                        canvas.before:
+                                Color:
+                                        rgba:(1,1,1,1)
+                                RoundedRectangle:
+                                        size: self.size
+                                        pos: self.pos
+                                #BorderImage:
+                                        # BorderImage behaves like the CSS BorderImage
+                                        #border: 10, 10, 10, 10
+                                        #texture: root.background_image.texture
+                                        #pos: self.pos
+                                        #size: self.size
+                        spacing:10
+                        Label:
+                                text:"Hello world"
+                                size_hint:[.4,.1]
+                        ScanScreen:
+                                pos_hint:{"center_x":.5}
+                        Button:
+                                id: scanbutton
+                                background_color:(0,0,0,0)
+                                canvas.before:
+                                        Color:
+                                                rgba:(0,0,1,1)
+                                        RoundedRectangle:
+                                                size: self.size
+                                                pos: self.pos
+                                                radius:[20,20]
+                                text:"Scan"
+                                pos_hint:{"center_x":.5}
+                                size_hint: [.4,.1]
+                                on_touch_up: root.ids.scanbutton.text = "Scanning..."
+                        Label:
+                                text:"[color=0000ff] or login [/color]"
+                                pos_hint:{"center_x":.5}
+                                size_hint: [.4,.05]
+                                markup:True
+                        Label:
+                                text:"[color=0000ff]Registration Number[/color]"
+                                pos_hint:{"center_x":.5}
+                                size_hint: [.4,.05]
+                                markup:True
+                        TextInput:
+                                text:"reg number..."
+                                pos_hint:{"center_x":.5}
+                                size_hint: [.4,.1]
+                        Label:
+                                text:"[color=5500ff] Password [/color]"
+                                pos_hint:{"center_x":.5}
+                                size_hint: [.4,.05]
+                                markup:True
+                        TextInput:
+                                text:"*******"
+                                password:True
+                                pos_hint:{"center_x":.5}
+                                size_hint: [.4,.1]
+                        Button:
+                                background_color:(0,0,0,0)
+                                canvas.before:
+                                        Color:
+                                                rgba:(0,0,1,1)
+                                        RoundedRectangle:
+                                                size: self.size
+                                                pos: self.pos
+                                                radius:[20,20]
+                                text:"LOGIN"
+                                pos_hint:{"center_x":.5}
+                                size_hint: [.4,.1]
+                                on_release: app.root.current = "profilepage"
+                        Label:
+                                text: "Hello world"
+                                size_hint:[.4,.1]

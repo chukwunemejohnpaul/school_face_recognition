@@ -1,0 +1,42 @@
+<ProfilePic>
+        background_normal:""
+        canvas.before:
+                Color:
+                        rgba:(1,1,1,1)
+                RoundedRectangle:
+                        size: self.size
+                        pos: self.pos
+                        texture: root.profileimage.texture
+        size_hint:[.8,.3]
+
+
+
+<Profilepage>
+		canvas.before:
+				Color:
+                        rgba:(1,1,1,1)
+                Rectangle:
+                        size: self.size
+                        pos: self.pos
+		BoxLayout:
+				spacing:3
+				BoxLayout:
+						spacing:3
+						orientation:"vertical"
+						canvas.before:
+								Color:
+                        				rgba:(0,0,0,1)
+                				Rectangle:
+                        				size: self.size
+                        				pos: self.pos
+						size_hint:.3,1
+
+						ProfilePic:
+								pos_hint:{"center_x":.5,"center_y":.6}
+						Label:
+								text:"[color=ff2266] Hello world [/color]"
+								markup:True
+				Label:
+						text:"[color=ff2266] Hello world [/color]"
+						markup:True
+						size_hint:1,1

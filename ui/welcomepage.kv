@@ -1,0 +1,27 @@
+<Mywig>
+		canvas.before:
+				Color:
+						rgba:(1,1,1,1)
+				Rectangle:
+						size: self.size
+						pos:self.pos
+						texture: self.nau_image.texture
+		size_hint: [.2,.2]
+
+
+
+<WelcomePage>
+    	id: mywelcomepage
+    	FloatLayout:
+    			canvas.before:
+    					Color:
+    							rgba:(1,1,1,1)
+    					Rectangle:
+    							size: self.size
+        		Mywig:
+        				pos_hint:{"center_x":.5,"center_y":.5}
+        		Label:
+        				text:"[b][color=0000ff] Cypher Technologies [/color][/b]"
+        				pos_hint:{"center_x":.5,"center_y":.1}
+        				markup:True
+
